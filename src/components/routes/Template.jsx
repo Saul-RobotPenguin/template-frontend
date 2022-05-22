@@ -6,7 +6,9 @@ import Base64Downloader from "common-base64-downloader-react";
 
 function Template() {
   const [template, setTemplate] = useState([]);
+  const [deleted, setDeleted] = useState(false);
   const { id } = useParams();
+  let navigate = useNavigate();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -62,6 +64,22 @@ function Template() {
     setUsersData(editedData);
   };
 
+  //deleting template
+  const deleteTemplate = () => {
+    axios({
+      url: `http://localhost:3000/api/templates/${id}`,
+      method: "DELETE",
+    })
+      .then(() => setDeleted(true))
+      .catch(console.error);
+  };
+
+  useEffect(() => {
+    if (deleted) {
+      return navigate("/");
+    }
+  }, [deleted, navigate]);
+
   return (
     <Layout>
       <p> Name: {template.name}</p>
@@ -84,6 +102,9 @@ function Template() {
 
         <button type="submit">Submit</button>
       </form>
+      <br />
+      <button onClick={() => deleteTemplate()}>Delete this template</button>
+      <br />
       <br />
       <Base64Downloader
         // base64={`data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,${template.file}`}
