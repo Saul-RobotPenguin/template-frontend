@@ -32,6 +32,62 @@ function Templates() {
           title={template.name}
           description={template.description}
         />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
       </div>
 
 
