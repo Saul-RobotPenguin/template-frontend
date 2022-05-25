@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
+import Card from "../shared/Card";
+import cover1 from "../images/Cover Letter 1.png";
+import Navbar from "../shared/Navbar";
 
 function Templates() {
   const [templates, setTemplates] = useState([]);
@@ -21,14 +24,23 @@ function Templates() {
 
   const templatesData = templates.map((template) => {
     return (
-      <li key={template._id}>
-        <NavLink to={`/template/${template._id}`}>{template.name}</NavLink>
-      </li>
+      <div>
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+      </div>
+
+
     );
   });
 
   return (
     <div>
+      <Navbar />
       <h4>Templates</h4>
       <ul>{templatesData}</ul>
     </div>
