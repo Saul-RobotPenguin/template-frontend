@@ -22,6 +22,7 @@ function Templates() {
 
   const templatesData = templates.map((template, key) => {
     return (
+<<<<<<< HEAD
       <Card
         key={template.id}
         path={`/template/${template._id}`}
@@ -29,6 +30,75 @@ function Templates() {
         title={template.name}
         description={template.description}
       />
+=======
+      <div>
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+        <Card
+          key={template._id}
+          path={`/template/${template._id}`}
+          img={cover1}
+          title={template.name}
+          description={template.description}
+        />
+      </div>
+
+
+>>>>>>> 086b6b8acbf9cd850d0f8b9e779ec1044eec909a
     );
   });
 
