@@ -16,7 +16,7 @@ function Template() {
         const response = await axios(
           `http://localhost:3000/api/templates/${id}`
         );
-        console.log(response.data.template);
+
         const result = response.data.template;
         setTemplate(result);
       } catch (error) {
@@ -205,6 +205,9 @@ function Template() {
       <br />
       <button onClick={() => deleteTemplate()}>Delete this template</button>
       <br />
+      <NavLink to={`/templates/${id}/edit`}>
+        <button>Edit This Template</button>
+      </NavLink>
       <br />
       <Base64Downloader
         // base64={`data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,${template.file}`}

@@ -41,7 +41,7 @@ function CreateTemplate() {
 
   useEffect(() => {
     if (createdTemplate) {
-      return navigate(`/templates`);
+      return navigate(`/`);
     }
   }, [createdTemplate, navigate]);
 

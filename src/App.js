@@ -2,8 +2,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./components/routes/Home";
 import Template from "./components/routes/Template";
-import Templates from "./components/routes/Templates";
 import CreateTemplate from "./components/routes/CreateTemplate";
+import TemplateEdit from "./components/routes/TemplateEdit";
 
 function App() {
   const location = useLocation();
@@ -15,9 +15,10 @@ function App() {
       <h3>{location.state ? location.state.msg : null}</h3>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/templates" element={<Templates />} />
+
         <Route path="/create-templates" element={<CreateTemplate />} />
         <Route path="/template/:id" element={<Template />} />
+        <Route path="/templates/:id/edit" element={<TemplateEdit />} />
       </Routes>
     </div>
   );

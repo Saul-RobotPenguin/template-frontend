@@ -1,10 +1,14 @@
 import Layout from "../shared/Layout";
-
+import Templates from "./Templates";
+import Footer from "../shared/Footer";
 const Home = () => {
   return (
-    <Layout>
-      <h4>Welcome to the Templates app!</h4>
-    </Layout>
+    <>
+      <Layout>
+        <Templates />
+      </Layout>
+      <Footer />
+    </>
   );
 };
 

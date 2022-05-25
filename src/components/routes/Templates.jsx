@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
 import axios from "axios";
 import Card from "../shared/Card";
 import cover1 from "../images/Cover Letter 1.png";
@@ -12,7 +11,6 @@ function Templates() {
     try {
       const response = await axios("http://localhost:3000/api/templates");
       setTemplates(response.data.template);
-      console.log(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -22,28 +20,18 @@ function Templates() {
     fetchData();
   }, []);
 
-  const templatesData = templates.map((template) => {
+  const templatesData = templates.map((template, key) => {
     return (
-      <div>
-        <Card
-          key={template._id}
-          path={`/template/${template._id}`}
-          img={cover1}
-          title={template.name}
-          description={template.description}
-        />
-      </div>
-
-
+      <Card
+        key={template.id}
+        path={`/template/${template._id}`}
+        img={cover1}
+        title={template.name}
+        description={template.description}
+      />
     );
   });
 
-  return (
-    <div>
-      <Navbar />
-      <h4>Templates</h4>
-      <ul>{templatesData}</ul>
-    </div>
-  );
+  return <div className="wrapper">{templatesData}</div>;
 }
 export default Templates;

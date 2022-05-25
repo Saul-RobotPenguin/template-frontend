@@ -1,5 +1,11 @@
+import "./Footer.css";
 const Footer = () => {
-  return <p>© Copyright {new Date().getFullYear()}. All Rights Reserved.</p>;
+  return (
+    <footer className="footer">
+      © Copyright of Saul, Josue and Micheal {new Date().getFullYear()}. All
+      Rights Reserved.
+    </footer>
+  );
 };
 
 export default Footer;
