@@ -3,7 +3,7 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import Base64Downloader from "common-base64-downloader-react";
-
+import "./Form.css";
 function Template() {
   const [template, setTemplate] = useState([]);
   const [deleted, setDeleted] = useState(false);
@@ -98,126 +98,205 @@ function Template() {
       <p> Description: {template.description}</p>.
       <br />
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          placeholder="Your First Name"
-          defaultValue={usersData.first_name}
-          name="first_name"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          placeholder="Your Last Name"
-          defaultValue={usersData.last_name}
-          name="last_name"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-one"
+            type="text"
+            defaultValue={usersData.first_name}
+            name="first_name"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-one">First Name</label>
+        </div>
 
-        <br />
-        <input
-          placeholder="Your Street Address"
-          defaultValue={usersData.street_address}
-          name="street_address"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-two"
+            type="text"
+            defaultValue={usersData.last_name}
+            name="last_name"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-two">Last Name</label>
+        </div>
 
-        <input
-          placeholder="Your City"
-          defaultValue={usersData.city}
-          name="city"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-three"
+            type="text"
+            defaultValue={usersData.street_address}
+            name="street_address"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-three"> Street Address</label>
+        </div>
 
-        <input
-          placeholder="Your Zipcode"
-          defaultValue={usersData.zipcode}
-          name="zipcode"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          placeholder="Your Email Address"
-          defaultValue={usersData.email}
-          name="email"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          placeholder="Company Name That You're Applying For"
-          defaultValue={usersData.company_name}
-          name="company_name"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
-        <input
-          placeholder="Your Phone Number"
-          defaultValue={usersData.phone_Num}
-          name="phone_Num"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-four"
+            type="text"
+            defaultValue={usersData.city}
+            name="city"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-four"> City</label>
+        </div>
 
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-five"
+            type="text"
+            defaultValue={usersData.zipcode}
+            name="zipcode"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-five">Street Zipcode</label>
+        </div>
 
-        <input
-          placeholder="The Job Role That You're Applying For"
-          defaultValue={usersData.job_role}
-          name="job_role"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-six"
+            type="text"
+            defaultValue={usersData.email}
+            name="email"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-six"> Email Address</label>
+        </div>
 
-        <br />
-        <input
-          placeholder="Skill Requirement"
-          defaultValue={usersData.skill_requirements1}
-          name="skill_skill_requirements1"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-seven"
+            type="text"
+            defaultValue={usersData.company_name}
+            name="company_name"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-seven">
+            The Name Of The Company You're Applying For
+          </label>
+        </div>
 
-        <br />
-        <input
-          placeholder="Skill Requirement"
-          defaultValue={usersData.skill_requirements2}
-          name="skill_skill_requirements2"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-eight"
+            type="text"
+            defaultValue={usersData.phone_Num}
+            name="phone_Num"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-eight">Phone Number</label>
+        </div>
 
-        <br />
-        <input
-          placeholder="Skill Requirement"
-          defaultValue={usersData.skill_requirements3}
-          name="skill_skill_requirements3"
-          onChange={(e) => handleChange(e)}
-        />
+        <div class="textfield-outlined">
+          <input
+            id="input-nine"
+            type="text"
+            defaultValue={usersData.job_role}
+            name="job_role"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-nine">The Role That You're Applying For</label>
+        </div>
 
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-ten"
+            type="text"
+            defaultValue={usersData.skill_requirements1}
+            name="skill_requirements1"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-ten">Skill Requirement 1</label>
+        </div>
 
-        <textarea
-          placeholder="Content"
-          defaultValue={usersData.content}
-          name="content"
-          onChange={(e) => handleChange(e)}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-eleven"
+            type="text"
+            defaultValue={usersData.skill_requirements2}
+            name="skill_requirements2"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-eleven">Skill Requirement 2</label>
+        </div>
 
-        <button type="submit">Submit</button>
+        <div class="textfield-outlined">
+          <input
+            id="input-twelve"
+            type="text"
+            defaultValue={usersData.skill_requirements3}
+            name="skill_requirements3"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-twelve">Skill Requirement 3</label>
+        </div>
+
+        <div class="textfield-outlined">
+          <textarea
+            id="input-thirteen"
+            type="text"
+            defaultValue={usersData.content}
+            name="content"
+            onChange={(e) => handleChange(e)}
+          />
+          <label for="input-thirteen">
+            A Piece Of Why You're A Fit For The Position
+          </label>
+        </div>
+
+        <button id="submit" type="submit">
+          Submit
+        </button>
       </form>
-      <br />
-      <button onClick={() => deleteTemplate()}>Delete this template</button>
-      <br />
-      <NavLink to={`/templates/${id}/edit`}>
-        <button>Edit This Template</button>
-      </NavLink>
-      <br />
-      <Base64Downloader
-        // base64={`data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,${template.file}`}
-        base64={base64}
-        downloadName="Download"
-      >
-        Click to download Your Cover Letter
-      </Base64Downloader>
-      <br />
-      <NavLink to="/templates">Back to all templates</NavLink>
+      <div className="container">
+        <button id="delete" onClick={() => deleteTemplate()}>
+          Delete this template
+        </button>
+
+        <NavLink to={`/templates/${id}/edit`}>
+          <button id="edit">Edit This Template</button>
+        </NavLink>
+
+        <Base64Downloader
+          // base64={`data:application/vnd.openxmlformats-officedocument.wordprocessingml.document;base64,${template.file}`}
+
+          base64={base64}
+          downloadName="Download"
+          style={{
+            appearance: "button",
+            backfaceVisibility: "hidden",
+            backgroundColor: "#4462da",
+            borderRadius: "6px",
+            borderWidth: "0",
+            boxShadow:
+              "rgba(50, 50, 93, 0.1) 0 0 0 1px inset,\n    rgba(50, 50, 93, 0.1) 0 2px 5px 0, rgba(0, 0, 0, 0.07) 0 1px 1px 0",
+            boxSizing: "border-box",
+            color: "#fff",
+            cursor: "pointer",
+            fontFamily:
+              '-apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",\n    Ubuntu, sans-serif',
+            fontSize: "100%",
+            height: "44px",
+            lineHeight: "1.15",
+            margin: "12px 0 0",
+            outline: "none",
+            overflow: "hidden",
+            padding: "0 25px",
+            position: "relative",
+            textAlign: "center",
+            textTransform: "none",
+            transform: "translateZ(0)",
+            transition: "all 0.2s, box-shadow 0.08s ease-in",
+            userSelect: "none",
+            WebkitUserSelect: "none",
+            touchAction: "manipulation",
+            width: "15.8rem",
+          }}
+        >
+          Download Me
+        </Base64Downloader>
+      </div>
     </Layout>
   );
 }
