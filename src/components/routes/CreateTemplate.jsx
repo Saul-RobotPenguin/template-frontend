@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import FileBase64 from "react-file-base64";
-
+import "./Form.css";
 function CreateTemplate() {
   const navigate = useNavigate();
   const [usersFileBase64, setUsersFileBase64] = useState("");
@@ -47,21 +47,29 @@ function CreateTemplate() {
 
   return (
     <Layout>
-      <br />
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          placeholder="Cover Letter Name"
-          name="name"
-          onChange={(e) => setTemplateName(e.target.value)}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-one"
+            type="text"
+            placeholder=""
+            name="name"
+            onChange={(e) => setTemplateName(e.target.value)}
+          />
+          <label for="input-one">Cover Letter Name</label>
+        </div>
 
-        <input
-          placeholder="Cover Letter Description"
-          name="description"
-          onChange={(e) => setTemplateDescription(e.target.value)}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-one"
+            type="text"
+            placeholder=""
+            name="description"
+            onChange={(e) => setTemplateDescription(e.target.value)}
+          />
+          <label for="input-two">Cover Letter Description</label>
+        </div>
+
         <FileBase64
           multiple={false}
           accept="docx"
@@ -70,8 +78,11 @@ function CreateTemplate() {
         />
 
         <br />
-
-        <button type="submit">Submit</button>
+        <br />
+        <br />
+        <button id="submit" type="submit">
+          Submit
+        </button>
       </form>
     </Layout>
   );

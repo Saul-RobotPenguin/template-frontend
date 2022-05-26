@@ -9,6 +9,7 @@
     "axios": "^0.26.1",
     "common-base64-downloader-react": "^1.0.7",
     "file-saver": "^2.0.5",
+    "node-sass": "^7.0.1",
     "pdfjs-dist": "^2.14.305",
     "react": "^17.0.2",
     "react-doc-viewer": "^0.1.5",
