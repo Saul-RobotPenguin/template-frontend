@@ -27,7 +27,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
   transition: transform 200ms ease-in;
 }
 .card__image {
@@ -47,16 +46,17 @@ body {
   font-weight: bold;
   font-size: 1rem;
   margin: 1rem;
-  border: 2px solid #d50000;
+  border: 2px solid #4462da;
   background: transparent;
-  color: #d50000;
+  color: #4462da;
   border-radius: 0.2rem;
   transition: background 200ms ease-in, color 200ms ease-in;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.02);
 }
 .card:hover .card__btn {
-  background: #d50000;
+  background: #4462da;
   color: white;
 }
