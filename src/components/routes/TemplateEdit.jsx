@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import FileBase64 from "react-file-base64";
+import "./Form.css";
 
 const TemplateEdit = () => {
   const navigate = useNavigate();
@@ -67,21 +68,28 @@ const TemplateEdit = () => {
       <br />
       <h1>Edit This Template</h1>
       <form onSubmit={(e) => handleSubmit(e)}>
-        <input
-          placeholder="Updated Cover Letter Name"
-          name="name"
-          onChange={(e) => setTemplateNameUpdated(e.target.value)}
-          value={templateNameUpdated}
-        />
-        <br />
-
-        <input
-          placeholder="Updated Cover Letter Description"
-          name="description"
-          onChange={(e) => setTemplateDescriptionUpdated(e.target.value)}
-          value={templateDescriptionUpdated}
-        />
-        <br />
+        <div class="textfield-outlined">
+          <input
+            id="input-one"
+            type="text"
+            placeholder="Updated Cover Letter Name"
+            name="name"
+            onChange={(e) => setTemplateNameUpdated(e.target.value)}
+            value={templateNameUpdated}
+          />
+          <label for="input-one">Updated Cover Letter Name</label>
+        </div>
+        <div class="textfield-outlined">
+          <input
+            id="input-two"
+            type="text"
+            placeholder="Updated Cover Letter Description"
+            name="description"
+            onChange={(e) => setTemplateDescriptionUpdated(e.target.value)}
+            value={templateDescriptionUpdated}
+          />
+          <label for="input-two">Updated Cover Letter Description</label>
+        </div>
         <FileBase64
           multiple={false}
           accept="docx"
@@ -91,7 +99,9 @@ const TemplateEdit = () => {
 
         <br />
 
-        <button type="submit">Submit</button>
+        <button id="submit" type="submit">
+          Submit
+        </button>
       </form>
     </Layout>
   );
