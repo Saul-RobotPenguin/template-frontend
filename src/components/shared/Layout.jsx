@@ -7,6 +7,7 @@ const Layout = (props) => {
       <h1>Templates App</h1>
       <Navbar />
 
+
       {props.children}
     </>
   );
