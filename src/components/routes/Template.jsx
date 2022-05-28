@@ -3,6 +3,7 @@ import { NavLink, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import Base64Downloader from "common-base64-downloader-react";
+import { getSingleTemplate } from "../services/services";
 import "./Form.css";
 function Template() {
   const [template, setTemplate] = useState([]);
@@ -13,10 +14,7 @@ function Template() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios(
-          `http://localhost:3000/api/templates/${id}`
-        );
-
+        const response = await getSingleTemplate(id);
         const result = response.data.template;
         setTemplate(result);
       } catch (error) {
@@ -57,7 +55,7 @@ function Template() {
     //if the entry is created in the database, save the response data
     // in the state
     axios({
-      url: `http://localhost:3000/api/templates/${id}`,
+      url: process.env.REACT_APP_SINGLE_TEMPLATE + `${id}`,
       method: "POST",
       data: usersData,
     })
@@ -78,8 +76,17 @@ function Template() {
 
   //deleting template
   const deleteTemplate = () => {
+    if (id == process.env.REACT_APP_NO1) {
+      return alert("This template cannot be deleted");
+    }
+    if (id == process.env.REACT_APP_NO2) {
+      return alert("This template cannot be deleted");
+    }
+    if (id == process.env.REACT_APP_NO3) {
+      return alert("This template cannot be deleted");
+    }
     axios({
-      url: `http://localhost:3000/api/templates/${id}`,
+      url: process.env.REACT_APP_SINGLE_TEMPLATE + `${id}`,
       method: "DELETE",
     })
       .then(() => setDeleted(true))
