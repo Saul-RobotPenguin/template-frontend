@@ -1,6 +1,6 @@
 /*   color variables */
 /*   border radius */
-*, *::before, *::after {
+/* *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,7 +10,7 @@ body {
   font-weight: 700;
   color: #2a324b;
   height: 100vh;
-}
+} */
 .nav {
   border-bottom: 1px solid #eef1f6;
 }
@@ -77,3 +77,8 @@ body {
     display: block;
   }
 }
+
+:where(a, .logo) {
+  display: flex;
+  align-items: center;
+ }

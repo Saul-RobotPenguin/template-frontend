@@ -1,9 +1,15 @@
+/* make a footer that uses grid to expand full width of the container */
+
 .footer {
   margin-top: 1rem;
   padding: 1rem;
   background-color: rgb(180, 180, 169);
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+ 
 }
