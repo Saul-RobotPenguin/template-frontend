@@ -27,7 +27,7 @@ function CreateTemplate() {
     //if the entry is created in the database, save the response data
     // in the state
     axios({
-      url: `http://localhost:3000/api/template`,
+      url: process.env.REACT_APP_CREATE_TEMPLATE,
       method: "POST",
       data: {
         name: templateName,

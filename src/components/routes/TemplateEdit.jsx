@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import FileBase64 from "react-file-base64";
+import { getSingleTemplate } from "../services/services";
 import "./Form.css";
 
 const TemplateEdit = () => {
@@ -13,6 +14,7 @@ const TemplateEdit = () => {
   const [templateNameUpdated, setTemplateNameUpdated] = useState("");
   const [templateDescriptionUpdated, setTemplateDescriptionUpdated] =
     useState("");
+  const [denied, setDenied] = useState(false);
 
   const [updated, setUpdated] = useState(false);
 
@@ -28,10 +30,7 @@ const TemplateEdit = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios(
-          `http://localhost:3000/api/templates/${id}`
-        );
-
+        const response = await getSingleTemplate(id);
         setTemplateNameUpdated(response.data.template.name);
         setTemplateDescriptionUpdated(response.data.template.description);
         setUsersFileBase64Updated(response.data.template.file);
@@ -44,8 +43,17 @@ const TemplateEdit = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (id == process.env.REACT_APP_NO1) {
+      return alert("This template cannot be edited");
+    }
+    if (id == process.env.REACT_APP_NO2) {
+      return alert("This template cannot be edited");
+    }
+    if (id == process.env.REACT_APP_NO3) {
+      return alert("This template cannot be edited");
+    }
     axios({
-      url: `http://localhost:3000/api/templates/${id}`,
+      url: process.env.REACT_APP_SINGLE_TEMPLATE + `${id}`,
       method: "PUT",
       data: {
         name: templateNameUpdated,
@@ -72,7 +80,6 @@ const TemplateEdit = () => {
           <input
             id="input-one"
             type="text"
-            placeholder="Updated Cover Letter Name"
             name="name"
             onChange={(e) => setTemplateNameUpdated(e.target.value)}
             value={templateNameUpdated}
@@ -83,7 +90,6 @@ const TemplateEdit = () => {
           <input
             id="input-two"
             type="text"
-            placeholder="Updated Cover Letter Description"
             name="description"
             onChange={(e) => setTemplateDescriptionUpdated(e.target.value)}
             value={templateDescriptionUpdated}
