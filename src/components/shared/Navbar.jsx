@@ -5,7 +5,7 @@ import svg from "../images/svgviewer-output.svg";
 
 const Navbar = () => {
   return (
-    <div className="">
+    <div className="container">
       <nav className="nav">
         <input type="checkbox" id="nav__checkbox" className="nav__checkbox" />
         <label htmlFor="nav__checkbox" className="nav__toggle">

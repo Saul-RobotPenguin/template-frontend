@@ -66,6 +66,7 @@ body {
 #nav__checkbox:checked ~ label.nav__toggle .menu {
   display: none;
 }
+
 @media only screen and (min-width: 560px) {
   .nav__toggle {
     display: none;

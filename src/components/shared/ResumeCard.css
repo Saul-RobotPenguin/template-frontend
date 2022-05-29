@@ -1,0 +1,38 @@
+.shape {
+    border: 0.5px solid #000000;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    z-index: 3;
+    padding: 40px;
+    height: calc(100% - 37%);
+    overflow: hidden;
+    position: absolute;
+    width: -moz-calc(100% - 79%);
+    width: -webkit-calc(100% - 69%);
+    width: calc(100% - 69%);
+  left: calc(100% - 40%);
+  top: calc(100% - 80%);
+    
+    background-color: #fff;
+}
+
+/* write content over the .shape class like a resume */
+
+.shape::after {
+    /* font-size: 12px;
+    color: #000;
+
+    font-weight: bold;
+    text-align: center;
+    margin-top: -1.5em;
+    margin-bottom: -1.5em; */
+}
+
+.content {
+    line-height: 1.2;
+    margin: 0 auto;
+    font-size: 1.65ch;
+    color: #000;
+    line-height: 1.2em;
+    padding-top: 52px;
+}

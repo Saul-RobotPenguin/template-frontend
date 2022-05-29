@@ -12,7 +12,7 @@
 .textfield-outlined > input,
 .textfield-outlined > textarea {
   box-sizing: border-box;
-  width: 100%;
+  width: 50%;
   padding: 9px 13px 9px;
   font-size: 14px;
   line-height: inherit;
@@ -25,6 +25,7 @@
   background-color: transparent;
   caret-color: #3d6f9e;
   transition: border 0.2s, box-shadow 0.2s;
+  margin-left: 20px;
 }
 .textfield-outlined > input:not(:focus):placeholder-shown,
 .textfield-outlined > textarea:not(:focus):placeholder-shown {
@@ -33,7 +34,7 @@
 .textfield-outlined > input + label,
 .textfield-outlined > textarea + label {
   display: flex;
-  width: 100%;
+  width: 50%;
   max-height: 100%;
   position: absolute;
   top: 0;

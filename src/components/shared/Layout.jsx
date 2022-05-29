@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+
 // import '../../App.css';
 
 const Layout = (props) => {
@@ -10,6 +11,7 @@ const Layout = (props) => {
 
 
       {props.children}
+      
     </>
   );
 };
