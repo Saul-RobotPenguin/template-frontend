@@ -311,3 +311,22 @@ input[type="file"]::file-selector-button {
   display: flex;
   justify-content: space-between;
 }
+
+.row {
+  padding-top: 20px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.form {
+  padding-top: 150px;
+}

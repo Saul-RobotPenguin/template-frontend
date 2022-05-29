@@ -7,8 +7,8 @@ const Layout = (props) => {
       <h1>Cover Letter.io</h1>
       <Navbar />
 
-
       {props.children}
+      <Footer />
     </>
   );
 };
