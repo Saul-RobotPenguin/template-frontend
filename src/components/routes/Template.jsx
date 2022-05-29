@@ -32,8 +32,8 @@ function Template() {
 
   //create functioinality
   const [usersData, setUsersData] = useState({
-    first_name: "Saul",
-    last_name: "Calleja",
+    first_name: "John",
+    last_name: "Smith",
     street_address: "Random Ave",
     city: "New York",
     zipcode: "12345",

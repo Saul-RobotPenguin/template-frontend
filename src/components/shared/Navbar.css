@@ -1,6 +1,8 @@
 /*   color variables */
 /*   border radius */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -9,7 +11,7 @@ body {
   font-family: "Andika New Basic", sans-serif;
   font-weight: 700;
   color: #2a324b;
-  height: 100vh;
+  height: 100%;
 }
 .nav {
   border-bottom: 1px solid #eef1f6;

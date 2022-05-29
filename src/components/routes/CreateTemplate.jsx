@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Layout from "../shared/Layout";
 import FileBase64 from "react-file-base64";
+import Directions from "../images/Formating Directions.png";
 import "./Form.css";
 function CreateTemplate() {
   const navigate = useNavigate();
@@ -47,43 +48,52 @@ function CreateTemplate() {
 
   return (
     <Layout>
-      <form onSubmit={(e) => handleSubmit(e)}>
-        <div class="textfield-outlined">
-          <input
-            id="input-one"
-            type="text"
-            placeholder=""
-            name="name"
-            onChange={(e) => setTemplateName(e.target.value)}
-          />
-          <label for="input-one">Cover Letter Name</label>
+      <div className="row">
+        <div className="column">
+          <div class="form">
+            <form onSubmit={(e) => handleSubmit(e)}>
+              <div class="textfield-outlined">
+                <input
+                  id="input-one"
+                  type="text"
+                  placeholder=""
+                  name="name"
+                  onChange={(e) => setTemplateName(e.target.value)}
+                />
+                <label for="input-one">Cover Letter Name</label>
+              </div>
+
+              <div class="textfield-outlined">
+                <input
+                  id="input-one"
+                  type="text"
+                  placeholder=""
+                  name="description"
+                  onChange={(e) => setTemplateDescription(e.target.value)}
+                />
+                <label for="input-two">Cover Letter Description</label>
+              </div>
+
+              <FileBase64
+                multiple={false}
+                accept="docx"
+                name="file"
+                onDone={(base64) => getUsersBase64(base64.base64)}
+              />
+
+              <br />
+              <br />
+              <br />
+              <button id="submit" type="submit">
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-
-        <div class="textfield-outlined">
-          <input
-            id="input-one"
-            type="text"
-            placeholder=""
-            name="description"
-            onChange={(e) => setTemplateDescription(e.target.value)}
-          />
-          <label for="input-two">Cover Letter Description</label>
+        <div className="column">
+          <img src={Directions} width="550px" height="850px" />
         </div>
-
-        <FileBase64
-          multiple={false}
-          accept="docx"
-          name="file"
-          onDone={(base64) => getUsersBase64(base64.base64)}
-        />
-
-        <br />
-        <br />
-        <br />
-        <button id="submit" type="submit">
-          Submit
-        </button>
-      </form>
+      </div>
     </Layout>
   );
 }
