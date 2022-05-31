@@ -42,7 +42,7 @@ Michael Francois
 
 ## ERD 
 
-[CoverLetter.io ER diagram](https://lucid.app/lucidchart/fea538f1-5d83-4197-a2e8-be3385a0864b/edit?page=0_0&invitationId=inv_3e9f913d-9275-4c01-a282-5f61b4cb4618#)
+[CoverLetter.io ER diagram](https://lucid.app/lucidchart/fea538f1-5d83-4197-a2e8-be3385a0864b/edit?viewport_loc=-23%2C-34%2C2994%2C1495%2C0_0&invitationId=inv_3e9f913d-9275-4c01-a282-5f61b4cb4618#)
 ## Wireframe
 
 [CoverLetter.io Wireframe](https://www.figma.com/file/FMmyVqyDDNWXg1JeAz4LlW/Dashboard-ui?node-id=0%3A1)
